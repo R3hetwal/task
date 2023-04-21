@@ -120,3 +120,12 @@ def get_data_for_nlc_सूचना(request):
         for row in reader:
             data.append(row)
     return JsonResponse(data, safe=False)
+
+@api_view(['GET'])             
+def get_data_for_nlc_डाउनलाेड(request):
+    data = []
+    with open('scraped/nlcdownloads.csv') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            data.append(row)
+    return JsonResponse(data, safe=False)

@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from api.viewsets.viewsets import get_data_for_Survey_publications, get_data_for_Survey_news, get_data_for_अन्य_उपयोगी_सामग्री, get_data_for_डाउनलोड_अन्य, get_data_for_डाउनलोड_ऐन_नियम, get_data_for_डाउनलोड_कार्यविधि, get_data_for_डाउनलोड_नियमावली, get_data_for_डाउनलोड_निर्देशिका, get_data_for_बारम्बार_सोधिने_प्रश्नहरु, get_data_for_सहकारी_सङ्घ_संस्था_तथ्याङ्क, get_data_for_सूचना, get_data_for_सूचनाको_हक, get_data_for_nlc_सूचना
+from api.viewsets.viewsets import get_data_for_Survey_publications, get_data_for_Survey_news, get_data_for_अन्य_उपयोगी_सामग्री, get_data_for_डाउनलोड_अन्य, get_data_for_डाउनलोड_ऐन_नियम, get_data_for_डाउनलोड_कार्यविधि, get_data_for_डाउनलोड_नियमावली, get_data_for_डाउनलोड_निर्देशिका, get_data_for_बारम्बार_सोधिने_प्रश्नहरु, get_data_for_सहकारी_सङ्घ_संस्था_तथ्याङ्क, get_data_for_सूचना, get_data_for_सूचनाको_हक, get_data_for_nlc_सूचना, get_data_for_nlc_डाउनलाेड
 from rest_framework import routers
 
 urlpatterns = [
@@ -17,4 +17,5 @@ urlpatterns = [
     path('dolma/office/dept/content/rules-1635137656', get_data_for_डाउनलोड_निर्देशिका),
     path('merokitta/faq', get_data_for_बारम्बार_सोधिने_प्रश्नहरु),
     path('nlc/सूचना', get_data_for_nlc_सूचना),
+    path('nlc/डाउनलाेड', get_data_for_nlc_डाउनलाेड),
 ]
